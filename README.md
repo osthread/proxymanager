@@ -13,28 +13,30 @@ ProxyManager is a Python library for efficiently managing and using HTTP proxies
 ## Installation
 Requires Python 3.7+. Install dependencies:
 ```
-pip install -r requirements.txt
+cd proxymanager
+pip install .
 ```
-### Setup
+
+### Usage
 ```
-import asyncio
 from proxymanager import ProxyManager
 
-async def setup():
-    proxy_manager = ProxyManager()
-    await proxy_manager.initialize_db()
+import asyncio
 
-asyncio.run(setup())
-```
-### Making Requests
-```
 async def main():
     proxy_manager = ProxyManager()
     await proxy_manager.initialize_db()
-    response = await proxy_manager.make_request_with_proxy('GET', 'https://example.com')
+    website = input("Enter a website (Example: https://google.com/): ")
+    request_type = input("Enter a request type (Example: GET | POST | PUT): ")
+    if website.lower() == "exit":
+        quit()
+        return
+    
+    response = await proxy_manager.make_request_with_proxy(request_type.upper(), website)
     print(response)
 
-asyncio.run(main())
+if __name__ == '__main__':
+    asyncio.run(main())
 ```
 
 ## ProxyManager Class
