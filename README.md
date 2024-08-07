@@ -15,8 +15,6 @@ Requires Python 3.7+. Install dependencies:
 ```
 pip install -r requirements.txt
 ```
-## Usage
-
 ### Setup
 ```
 import asyncio
@@ -27,8 +25,9 @@ async def setup():
     await proxy_manager.initialize_db()
 
 asyncio.run(setup())
-
+```
 ### Making Requests
+```
 async def main():
     proxy_manager = ProxyManager()
     await proxy_manager.initialize_db()
