@@ -18,7 +18,7 @@ pip install .
 ```
 
 ### Usage
-```
+```python
 from proxymanager import ProxyManager
 
 import asyncio
