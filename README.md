@@ -1,12 +1,13 @@
 # ProxyManager Library
 
 ## Overview
-ProxyManager is a Python library for efficiently managing and using HTTP proxies. It fetches, stores, rotates, and handles proxies for making HTTP requests.
+I was bored so I made this for fun and no longer need it on my pc..... Anyways
+ProxyManager is a Python library for efficiently managing and using HTTP/HTTPS proxies. It fetches, stores, rotates, and handles proxies for making HTTP requests.
 
 ## Features
 - Fetch proxies from public APIs
 - Store proxies in SQLite database
-- Rotate proxies for HTTP requests
+- Rotate proxies for HTTP/HTTPS requests
 - Handle dead proxies
 - Asynchronous operations
 
